@@ -4,7 +4,10 @@ import Image from "next/image";
 import DropDownIcon from "./DropDown";
 import { SmileOutlined } from "@ant-design/icons";
 import { notification } from "antd";
-function Header() {
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
+
+function Header({ onToggleSidebar }) {
   const [api, contextHolder] = notification.useNotification();
 
   const openNotification = () => {
@@ -23,8 +26,14 @@ function Header() {
   };
 
   return (
-    <header className="flex justify-between items-center pb-5 bg-white dark:bg-[#1A1C29] py-4 border-b  border-gray-50 dark:border-gray-900">
+    <header className="flex justify-between items-center pb-5 bg-white dark:bg-[#1A1C29] py-4 border-b  border-gray-50 dark:border-gray-900 relative w-full">
       <span className="px-6 text-2xl font-bold">Dashboard</span>
+      <div
+        className="flex md:hidden absolute right-3"
+        onClick={onToggleSidebar}
+      >
+        <FontAwesomeIcon icon={faBars} />
+      </div>
       {/* <div className="relative flex items-center space-x-12">
         <svg
           width="18"
@@ -40,9 +49,9 @@ function Header() {
             d="M12 3.5C7.95763 3.5 4.68066 6.77697 4.68066 10.8193C4.68066 14.8617 7.95763 18.1386 12 18.1386C16.0423 18.1386 19.3193 14.8617 19.3193 10.8193C19.3193 6.77697 16.0423 3.5 12 3.5ZM3.18066 10.8193C3.18066 5.94854 7.1292 2 12 2C16.8707 2 20.8193 5.94854 20.8193 10.8193C20.8193 13.5062 19.6177 15.9125 17.7225 17.5301L20.2719 20.7877C20.5272 21.1139 20.4697 21.5853 20.1435 21.8405C19.8173 22.0958 19.3459 22.0383 19.0907 21.7121L16.5021 18.4045C15.1842 19.1884 13.6447 19.6386 12 19.6386C7.1292 19.6386 3.18066 15.6901 3.18066 10.8193Z"
             fill="black"
           />
-        </svg> */}
+        </svg>
 
-      {/* <input
+      <input
           type="text"
           placeholder="Search..."
           className="pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
@@ -67,8 +76,8 @@ function Header() {
             onClick={openNotification}
           />
         </div>
-        <DropDownIcon /> */}
-      {/* </div> */}
+        <DropDownIcon />
+      </div> */}
     </header>
   );
 }

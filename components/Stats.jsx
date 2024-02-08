@@ -10,7 +10,7 @@ function Stats() {
   return (
     <div className="pl-4 flex flex-col md:flex-row py-6 space-y-4 md:space-x-4 md:space-y-0">
       <div
-        className={`flex flex-col  border-none rounded-[8px] w-[355px] md:w-[570px] h-[200px] bg-white dark:bg-[#1A1C29] hover:scale-105 transition-transform duration-300 ease-in-out ${
+        className={`flex flex-col  border-none rounded-[8px] w-[358px] md:w-[570px] h-[200px] bg-white dark:bg-[#1A1C29] hover:scale-105 transition-transform duration-300 ease-in-out ${
           isHovered ? "hovered" : ""
         }`}
         onMouseEnter={() => setIsHovered(true)}
@@ -45,7 +45,7 @@ function Stats() {
       </div>
 
       <div
-        className={`flex flex-col  border-none rounded-[8px] w-[355px] md:w-[570px] h-[200px] bg-white dark:bg-[#1A1C29] hover:scale-105 transition-transform duration-300 ease-in-out ${
+        className={`flex flex-col  border-none rounded-[8px] w-[358px] md:w-[570px] h-[200px] bg-white dark:bg-[#1A1C29] hover:scale-105 transition-transform duration-300 ease-in-out ${
           isHover ? "hovered" : ""
         }`}
         onMouseEnter={() => setIsHover(true)}

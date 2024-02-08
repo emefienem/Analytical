@@ -199,7 +199,7 @@ const ChartComponent = () => {
 
       <div className="pl-0 md:pl-4 flex flex-col space-y-4">
         <div
-          className={`flex flex-col  border-none rounded-[8px] w-[355px] md:w-[440px] h-[200px] bg-white dark:bg-[#1A1C29] hover:scale-105 transition-transform duration-300 ease-in-out ${
+          className={`flex flex-col  border-none rounded-[8px] w-[358px] md:w-[440px] h-[200px] bg-white dark:bg-[#1A1C29] hover:scale-105 transition-transform duration-300 ease-in-out ${
             isHovered ? "hovered" : ""
           }`}
           onMouseEnter={() => setIsHovered(true)}
@@ -235,7 +235,7 @@ const ChartComponent = () => {
         </div>
 
         <div
-          className={`flex flex-col  border-none rounded-[8px] w-[355px] md:w-[440px] h-[200px] bg-white dark:bg-[#1A1C29] hover:scale-105 transition-transform duration-300 ease-in-out ${
+          className={`flex flex-col  border-none rounded-[8px] w-[358px] md:w-[440px] h-[200px] bg-white dark:bg-[#1A1C29] hover:scale-105 transition-transform duration-300 ease-in-out ${
             isHover ? "hovered" : ""
           }`}
           onMouseEnter={() => setIsHover(true)}

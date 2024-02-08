@@ -1,8 +1,12 @@
 import { ThemeToggler } from "./ThemeToggler";
 import Image from "next/image";
-function Sidebar({ onMenuItemClick }) {
+function Sidebar({ onMenuItemClick, isOpen, onToggleSidebar }) {
   return (
-    <div className="responsive-sidebar h-screen p-5  w-40 border-r border-gray-50 dark:border-gray-900 bg-gray-50 dark:bg-gray-800">
+    <div
+      className={`h-screen p-5  w-40 border-r border-gray-50 dark:border-gray-900 bg-gray-50 dark:bg-gray-800 ${
+        !isOpen ? "hidden" : ""
+      } md:z-10`}
+    >
       <Image
         src="/Vector.png"
         width={40}
@@ -12,7 +16,10 @@ function Sidebar({ onMenuItemClick }) {
       />
       <div
         className="flex space-x-2"
-        onClick={() => onMenuItemClick("Dashboard")}
+        onClick={() => {
+          onMenuItemClick("Dashboard");
+          onToggleSidebar();
+        }}
       >
         <Image
           src="https://img.icons8.com/ios/50/health-data.png"
@@ -27,7 +34,10 @@ function Sidebar({ onMenuItemClick }) {
 
       <div
         className="flex space-x-2"
-        onClick={() => onMenuItemClick("Analytics")}
+        onClick={() => {
+          onMenuItemClick("Analytics");
+          onToggleSidebar();
+        }}
       >
         <Image
           src="https://img.icons8.com/fluency-systems-regular/48/web-analystics.png"
@@ -42,7 +52,10 @@ function Sidebar({ onMenuItemClick }) {
 
       <div
         className="flex space-x-2 pb-7"
-        onClick={() => onMenuItemClick("Customers")}
+        onClick={() => {
+          onMenuItemClick("Customers");
+          onToggleSidebar();
+        }}
       >
         <svg
           width="25"
@@ -65,7 +78,10 @@ function Sidebar({ onMenuItemClick }) {
 
       <div
         className="flex space-x-2"
-        onClick={() => onMenuItemClick("Discounts")}
+        onClick={() => {
+          onMenuItemClick("Discounts");
+          onToggleSidebar();
+        }}
       >
         <Image
           width={25}
@@ -78,7 +94,13 @@ function Sidebar({ onMenuItemClick }) {
         <span className="cursor-pointer">Discounts</span>
       </div>
 
-      <div className="flex space-x-2" onClick={() => onMenuItemClick("Help")}>
+      <div
+        className="flex space-x-2"
+        onClick={() => {
+          onMenuItemClick("Help");
+          onToggleSidebar();
+        }}
+      >
         <Image
           src="https://img.icons8.com/pulsar-line/48/help.png"
           width={25}
@@ -94,7 +116,10 @@ function Sidebar({ onMenuItemClick }) {
       <div className="py-24">
         <div
           className="flex space-x-2"
-          onClick={() => onMenuItemClick("Settings")}
+          onClick={() => {
+            onMenuItemClick("Settings");
+            onToggleSidebar();
+          }}
         >
           <Image
             width={20}
@@ -109,7 +134,10 @@ function Sidebar({ onMenuItemClick }) {
 
         <div
           className="flex space-x-2"
-          onClick={() => onMenuItemClick("Sign out")}
+          onClick={() => {
+            onMenuItemClick("Sign out");
+            onToggleSidebar();
+          }}
         >
           <Image
             width={20}
