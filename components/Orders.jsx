@@ -151,6 +151,7 @@ const Orders = () => {
                   width={30}
                   height={30}
                   className="invert-0 dark:invert"
+                  alt="Logo"
                 />
                 <div className="text-lg font-bold">ANALYTICAL CO.</div>
               </div>

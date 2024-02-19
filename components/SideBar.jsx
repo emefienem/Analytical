@@ -1,3 +1,4 @@
+"use client";
 import { ThemeToggler } from "./ThemeToggler";
 import Image from "next/image";
 function Sidebar({ onMenuItemClick, isOpen, onToggleSidebar }) {

@@ -148,7 +148,7 @@ const ChartComponent = () => {
         },
       },
     }));
-  }, [theme]);
+  }, [theme, options]);
 
   useEffect(() => {
     switch (currentView) {
@@ -175,7 +175,15 @@ const ChartComponent = () => {
         break;
       default:
     }
-  }, [currentView]);
+  }, [
+    currentView,
+    monthlyData.categories,
+    monthlyData.seriesData,
+    weeklyData.categories,
+    weeklyData.seriesData,
+    yearlyData.categories,
+    yearlyData.seriesData,
+  ]);
 
   return (
     <div className="p-4 pb-0 md:pb-4 relative flex flex-col md:flex-row">
