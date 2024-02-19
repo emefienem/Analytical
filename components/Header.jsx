@@ -34,7 +34,7 @@ function Header({ onToggleSidebar }) {
       >
         <FontAwesomeIcon icon={faBars} />
       </div>
-      {/* <div className="relative flex items-center space-x-12">
+      <div className="relative items-center space-x-12 hidden md:flex">
         <svg
           width="18"
           height="18"
@@ -51,7 +51,7 @@ function Header({ onToggleSidebar }) {
           />
         </svg>
 
-      <input
+        <input
           type="text"
           placeholder="Search..."
           className="pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
@@ -77,7 +77,7 @@ function Header({ onToggleSidebar }) {
           />
         </div>
         <DropDownIcon />
-      </div> */}
+      </div>
     </header>
   );
 }
